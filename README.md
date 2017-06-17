@@ -90,7 +90,7 @@ You can initialise an eslint configuration file (generally `.eslintrc`) by runni
 $ ./node_modules/.bin/eslint --init
 ```
 
-For example, to use [eslint-plugin-compat]](https://github.com/amilajack/eslint-plugin-compat) for browser compatability using browserslist:
+For example, to use [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat) for browser compatability using browserslist:
 
 ```
 # .eslintrc
@@ -195,7 +195,7 @@ Include the bundle file in your html:
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Example</title>
+    <title>XXX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -323,11 +323,7 @@ $ yarn remove [package]
 
 Installing all the dependencies of project
 ```
-$ yarn
-```
-or
-```
-$ yarn install
+$ yarn    /    $ yarn install
 ```
 
 Each command will automatically update your `package.json` and `yarn.lock` files.
@@ -354,9 +350,6 @@ $ npm start
 $ npm test
 $ npm stop
 $ npm restart
-$ npm stop
-$ npm restart
-$ npm start
 ```
 
 The above scripts also support running scripts before and after the base script by using the prefixes pre and post.
