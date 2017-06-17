@@ -4,16 +4,67 @@
 mkdir <project-name>
 cd <project-name>
 git init
-touch .gitignore
 yarn init
 
 # pause to allow set up of package.json
 
 yarn add webpack webpack-dev-server eslint --dev
-touch webpack.config.js
 yarn add babel-core babel-loader babel-preset-env --dev
-touch .babelrc
+
 mkdir src dist
+touch src/index.js
+
+echo '{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }]
+  ]
+}
+' > .babelrc
+
+echo '
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist
+' > .gitignore
+
+echo '<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>XXX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
+' > index.html
+
+echo 'v7.9.0' > .nvmrc
+
+echo 'const path = require("path");
+
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist")
+  },
+  devServer: {
+    contentBase: __dirname,
+    hot: true,
+    publicPath: "/"
+  }
+};
+' > webpack.config.js
+
 ./node_modules/.bin/eslint --init
 
 # pause to set up eslint settings
