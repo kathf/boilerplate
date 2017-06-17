@@ -4,14 +4,19 @@
 mkdir <project-name>
 cd <project-name>
 git init
-yarn init
-yarn add webpack webpack-dev-server eslint --dev
-yarn add babel-core babel-loader babel-preset-env --dev
-touch webpack.config.js
-./node_modules/.bin/eslint --init
 touch .gitignore
+yarn init
+
+# pause to allow set up of package.json
+
+yarn add webpack webpack-dev-server eslint --dev
+touch webpack.config.js
+yarn add babel-core babel-loader babel-preset-env --dev
 touch .babelrc
 mkdir src dist
+./node_modules/.bin/eslint --init
+
+# pause to set up eslint settings
 ```
 
 # Starting a new project
