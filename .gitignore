@@ -8,3 +8,6 @@ yarn-error.log*
 
 # Dependencies
 node_modules/
+
+# webpack output directory
+dist
