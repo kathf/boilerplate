@@ -1,3 +1,19 @@
+# Quickstart Summary
+
+```
+mkdir <project-name>
+cd <project-name>
+git init
+yarn init
+yarn add webpack webpack-dev-server eslint --dev
+yarn add babel-core babel-loader babel-preset-env --dev
+touch webpack.config.js
+./node_modules/.bin/eslint --init
+touch .gitignore
+touch .babelrc
+mkdir src dist
+```
+
 # Starting a new project
 
 ## Yarn
