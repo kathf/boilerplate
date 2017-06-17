@@ -68,6 +68,7 @@ module.exports = {
 ./node_modules/.bin/eslint --init
 
 # pause to set up eslint settings
+# Add scripts to package.json manually
 ```
 
 # Starting a new project
